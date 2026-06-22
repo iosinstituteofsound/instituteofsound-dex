@@ -1,0 +1,16 @@
+{
+  "name": "dex-knowledge-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DEX — futuristic role-based music knowledge system for Institute of Sound",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/server.mjs",
+    "dev": "node scripts/server.mjs --open",
+    "install:mac": "bash scripts/install-mac.sh",
+    "uninstall:mac": "bash scripts/uninstall-mac.sh"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

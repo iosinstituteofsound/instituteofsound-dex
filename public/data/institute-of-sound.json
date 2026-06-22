@@ -1,0 +1,122 @@
+{
+  "source": "Institute of Sound Local Graph",
+  "version": "0.1.0",
+  "updatedAt": "2026-06-21T17:45:00.000Z",
+  "profile": {
+    "name": "Arjun Kale",
+    "role": "Sonic Architect",
+    "rank": "VII",
+    "level": 27,
+    "xp": {
+      "current": 7840,
+      "target": 10000
+    }
+  },
+  "modules": [
+    {
+      "id": "artist",
+      "name": "ArtistDex",
+      "icon": "A",
+      "sync": 86,
+      "discoveries": 42,
+      "connections": 148,
+      "achievements": 12,
+      "artifacts": 42,
+      "tone": "violet",
+      "description": "Your evolving artistic identity, sound signatures, influences, releases, and creative milestones."
+    },
+    {
+      "id": "editor",
+      "name": "EditorDex",
+      "icon": "E",
+      "sync": 64,
+      "discoveries": 18,
+      "connections": 76,
+      "achievements": 8,
+      "artifacts": 18,
+      "tone": "cyan",
+      "description": "Your editorial eye, narrative decisions, sonic refinements, and craft lineage across every project."
+    },
+    {
+      "id": "curator",
+      "name": "CuratorDex",
+      "icon": "C",
+      "sync": 91,
+      "discoveries": 73,
+      "connections": 203,
+      "achievements": 19,
+      "artifacts": 73,
+      "tone": "magenta",
+      "description": "Your taste constellation: collections, recommendations, cultural threads, and the signals only you connect."
+    },
+    {
+      "id": "listener",
+      "name": "ListenerDex",
+      "icon": "L",
+      "sync": 78,
+      "discoveries": 2400,
+      "connections": 284,
+      "achievements": 14,
+      "artifacts": 2400,
+      "tone": "blue",
+      "description": "Your listening universe, from recurring moods and hidden affinities to the sounds shaping your inner world."
+    },
+    {
+      "id": "producer",
+      "name": "ProducerDex",
+      "icon": "P",
+      "sync": 52,
+      "discoveries": 12,
+      "connections": 61,
+      "achievements": 7,
+      "artifacts": 12,
+      "tone": "amber",
+      "description": "Your production intelligence: sessions, collaborators, tools, techniques, and an evolving creative fingerprint."
+    }
+  ],
+  "nodes": [
+    { "id": "core", "label": "DEX Core", "type": "system", "weight": 100 },
+    { "id": "artist", "label": "ArtistDex", "type": "module", "weight": 86 },
+    { "id": "editor", "label": "EditorDex", "type": "module", "weight": 64 },
+    { "id": "curator", "label": "CuratorDex", "type": "module", "weight": 91 },
+    { "id": "listener", "label": "ListenerDex", "type": "module", "weight": 78 },
+    { "id": "producer", "label": "ProducerDex", "type": "module", "weight": 52 },
+    { "id": "obsidian-frequencies", "label": "Obsidian Frequencies", "type": "collection", "weight": 73 },
+    { "id": "nyra-voss", "label": "Nyra Voss", "type": "connection", "weight": 67 },
+    { "id": "ambient-systems", "label": "Ambient Systems", "type": "genre", "weight": 58 }
+  ],
+  "edges": [
+    { "from": "core", "to": "artist", "label": "identity", "strength": 0.86 },
+    { "from": "core", "to": "editor", "label": "craft", "strength": 0.64 },
+    { "from": "core", "to": "curator", "label": "taste", "strength": 0.91 },
+    { "from": "core", "to": "listener", "label": "resonance", "strength": 0.78 },
+    { "from": "core", "to": "producer", "label": "creation", "strength": 0.52 },
+    { "from": "curator", "to": "obsidian-frequencies", "label": "collection", "strength": 0.74 },
+    { "from": "artist", "to": "nyra-voss", "label": "collaboration signal", "strength": 0.66 },
+    { "from": "listener", "to": "ambient-systems", "label": "listening affinity", "strength": 0.82 },
+    { "from": "editor", "to": "ambient-systems", "label": "narrative thread", "strength": 0.51 }
+  ],
+  "signals": [
+    {
+      "id": "sig-001",
+      "title": "New sonic connection mapped",
+      "detail": "Nyra Voss - Ambient Systems",
+      "type": "connection",
+      "age": "04M"
+    },
+    {
+      "id": "sig-002",
+      "title": "Collection threshold reached",
+      "detail": "Obsidian Frequencies - 24 artifacts",
+      "type": "collection",
+      "age": "2H"
+    },
+    {
+      "id": "sig-003",
+      "title": "ProducerDex achievement unlocked",
+      "detail": "Signal Architect - Tier II",
+      "type": "achievement",
+      "age": "1D"
+    }
+  ]
+}
