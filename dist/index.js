@@ -182,7 +182,7 @@ var A = f()(w((e) => ({
 	return /* @__PURE__ */ h("button", {
 		type: "button",
 		"aria-label": "Open DEX intelligence device",
-		className: `dex-interactive dex-floating-icon dex-pulse${p ? " dex-floating-icon--pulse" : ""}`,
+		className: `dex-interactive dex-floating-icon${p ? " dex-floating-icon--pulse" : ""}`,
 		style: {
 			right: r,
 			bottom: i,
@@ -194,19 +194,42 @@ var A = f()(w((e) => ({
 		onPointerUp: b,
 		onPointerCancel: x,
 		children: [
-			/* @__PURE__ */ m("span", { className: "dex-icon-ring dex-icon-ring--inner" }),
-			/* @__PURE__ */ m("span", { className: "dex-icon-ring dex-icon-ring--outer" }),
 			/* @__PURE__ */ m("span", {
+				className: "dex-icon-aura",
+				"aria-hidden": !0
+			}),
+			/* @__PURE__ */ m("span", {
+				className: "dex-icon-orbit dex-icon-orbit--outer",
+				"aria-hidden": !0
+			}),
+			/* @__PURE__ */ m("span", {
+				className: "dex-icon-orbit dex-icon-orbit--inner",
+				"aria-hidden": !0
+			}),
+			/* @__PURE__ */ m("span", {
+				className: "dex-icon-sweep",
+				"aria-hidden": !0
+			}),
+			/* @__PURE__ */ h("span", {
 				className: "dex-icon-core",
-				children: /* @__PURE__ */ m("span", {
-					className: "dex-neon-text",
-					style: {
-						fontSize: 10,
-						fontWeight: 700,
-						letterSpacing: "0.2em"
-					},
+				"aria-hidden": !0,
+				children: [/* @__PURE__ */ h("span", {
+					className: "dex-icon-hud",
+					children: [
+						/* @__PURE__ */ m("span", { className: "dex-icon-hud__corner dex-icon-hud__corner--tl" }),
+						/* @__PURE__ */ m("span", { className: "dex-icon-hud__corner dex-icon-hud__corner--tr" }),
+						/* @__PURE__ */ m("span", { className: "dex-icon-hud__corner dex-icon-hud__corner--bl" }),
+						/* @__PURE__ */ m("span", { className: "dex-icon-hud__corner dex-icon-hud__corner--br" })
+					]
+				}), /* @__PURE__ */ m("span", {
+					className: "dex-icon-text",
+					"data-text": "DEX",
 					children: "DEX"
-				})
+				})]
+			}),
+			/* @__PURE__ */ m("span", {
+				className: "dex-icon-led",
+				"aria-hidden": !0
 			})
 		]
 	});

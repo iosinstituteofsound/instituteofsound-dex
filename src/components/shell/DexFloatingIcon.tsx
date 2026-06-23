@@ -73,20 +73,32 @@ export const DexFloatingIcon = memo(function DexFloatingIcon() {
     <button
       type="button"
       aria-label="Open DEX intelligence device"
-      className={`dex-interactive dex-floating-icon dex-pulse${pulse ? ' dex-floating-icon--pulse' : ''}`}
+      className={`dex-interactive dex-floating-icon${pulse ? ' dex-floating-icon--pulse' : ''}`}
       style={{ right, bottom, width: ICON, height: ICON }}
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
       onPointerCancel={onPointerCancel}
     >
-      <span className="dex-icon-ring dex-icon-ring--inner" />
-      <span className="dex-icon-ring dex-icon-ring--outer" />
-      <span className="dex-icon-core">
-        <span className="dex-neon-text" style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.2em' }}>
+      <span className="dex-icon-aura" aria-hidden />
+      <span className="dex-icon-orbit dex-icon-orbit--outer" aria-hidden />
+      <span className="dex-icon-orbit dex-icon-orbit--inner" aria-hidden />
+      <span className="dex-icon-sweep" aria-hidden />
+
+      <span className="dex-icon-core" aria-hidden>
+        <span className="dex-icon-hud">
+          <span className="dex-icon-hud__corner dex-icon-hud__corner--tl" />
+          <span className="dex-icon-hud__corner dex-icon-hud__corner--tr" />
+          <span className="dex-icon-hud__corner dex-icon-hud__corner--bl" />
+          <span className="dex-icon-hud__corner dex-icon-hud__corner--br" />
+        </span>
+
+        <span className="dex-icon-text" data-text="DEX">
           DEX
         </span>
       </span>
+
+      <span className="dex-icon-led" aria-hidden />
     </button>
   )
 })
