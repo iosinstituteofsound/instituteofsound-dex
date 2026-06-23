@@ -475,8 +475,8 @@ var A = f()(w((e) => ({
 	});
 }), B = a(() => import("./NowPlayingPanel-CLqyXCWh.js").then((e) => ({ default: e.NowPlayingPanel }))), V = a(() => import("./ArtistScanPanel-Bylt5WLq.js").then((e) => ({ default: e.ArtistScanPanel }))), H = a(() => import("./SignalArchivePanel-BO69Tysg.js").then((e) => ({ default: e.SignalArchivePanel }))), U = a(() => import("./LyricsDatabasePanel-B8kuiKY-.js").then((e) => ({ default: e.LyricsDatabasePanel }))), W = a(() => import("./NetworkIntelPanel-DFj7Rfzn.js").then((e) => ({ default: e.NetworkIntelPanel }))), G = {
 	"now-playing": B,
-	identity: a(() => import("./IdentityPanel-BwrViKoS.js").then((e) => ({ default: e.IdentityPanel }))),
-	"dex-chat": a(() => import("./DexChatPanel-JLnC_1C3.js").then((e) => ({ default: e.DexChatPanel }))),
+	identity: a(() => import("./IdentityPanel-CukLhOPB.js").then((e) => ({ default: e.IdentityPanel }))),
+	"dex-chat": a(() => import("./DexChatPanel-BYXkVDpQ.js").then((e) => ({ default: e.DexChatPanel }))),
 	"artist-scan": V,
 	"signal-archive": H,
 	"lyrics-database": U,
@@ -715,4 +715,9 @@ function ie(e = "now-playing") {
 	t.getState().openForPlayback(e);
 }
 //#endregion
-export { $ as DexProvider, re as DexShell, ie as openDexForPlayback };
+//#region src/actions/close-dex.ts
+function ae() {
+	t.getState().close();
+}
+//#endregion
+export { $ as DexProvider, re as DexShell, ae as closeDex, ie as openDexForPlayback };

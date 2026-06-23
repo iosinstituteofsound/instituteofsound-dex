@@ -8,10 +8,15 @@ async function i() {
 //#endregion
 //#region src/hooks/use-dex-identity-query.ts
 function a() {
+	let t = e().getAccessToken?.() ?? null;
 	return r({
-		queryKey: ["dex", "identity-profile"],
+		queryKey: [
+			"dex",
+			"identity-profile",
+			t
+		],
 		queryFn: i,
-		enabled: !!e().getAccessToken?.(),
+		enabled: !!t,
 		staleTime: 3e4,
 		refetchInterval: 45e3,
 		retry: 1

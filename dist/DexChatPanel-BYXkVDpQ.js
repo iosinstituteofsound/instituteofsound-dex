@@ -1,6 +1,6 @@
 import { a as e } from "./dex-client-D9KjXfbW.js";
 import { t } from "./use-dex-context-query-B3ucevSe.js";
-import { t as n } from "./use-dex-identity-query-DYiEcLCA.js";
+import { t as n } from "./use-dex-identity-query-DcNZblV1.js";
 import { memo as r, useCallback as i, useEffect as a, useRef as o, useState as s } from "react";
 import { jsx as c, jsxs as l } from "react/jsx-runtime";
 import { motion as u } from "framer-motion";

@@ -2,7 +2,7 @@ import { a as e } from "./dex-client-D9KjXfbW.js";
 import { t } from "./DexSkeleton-C8SxNkcP.js";
 import { n, t as r } from "./DexVerifiedBadge-CD-khm_g.js";
 import { t as i } from "./EmptySignal-DoKFuov_.js";
-import { t as a } from "./use-dex-identity-query-DYiEcLCA.js";
+import { t as a } from "./use-dex-identity-query-DcNZblV1.js";
 import { memo as o } from "react";
 import { jsx as s, jsxs as c } from "react/jsx-runtime";
 import { motion as l } from "framer-motion";

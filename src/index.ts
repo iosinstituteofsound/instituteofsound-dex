@@ -1,4 +1,5 @@
 export { DexShell } from './components/shell/DexShell'
 export { DexProvider } from './providers/DexProvider'
 export { openDexForPlayback } from './actions/open-dex-for-playback'
+export { closeDex } from './actions/close-dex'
 export type { DexConfig, DexContext, DexShellProps, DexModuleId, DexBootPhase } from './types'

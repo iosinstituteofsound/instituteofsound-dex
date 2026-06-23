@@ -3,10 +3,11 @@ import { fetchDexIdentityProfile } from '@dex/api/identity.api'
 import { getDexConfig } from '@dex/api/dex-client'
 
 export function useDexIdentityQuery() {
-  const hasToken = Boolean(getDexConfig().getAccessToken?.())
+  const accessToken = getDexConfig().getAccessToken?.() ?? null
+  const hasToken = Boolean(accessToken)
 
   return useQuery({
-    queryKey: ['dex', 'identity-profile'],
+    queryKey: ['dex', 'identity-profile', accessToken],
     queryFn: fetchDexIdentityProfile,
     enabled: hasToken,
     staleTime: 30_000,
