@@ -1,0 +1,13 @@
+:root {
+  --dex-cyan: #00dcff;
+  --dex-blue: #0088ff;
+  --dex-white: #e8f4ff;
+  --dex-bg: rgba(6, 12, 22, 0.98);
+  --dex-panel-bg: rgba(8, 18, 32, 0.96);
+  --dex-panel-border: rgba(0, 200, 255, 0.18);
+  --dex-glow: rgba(0, 220, 255, 0.45);
+  --dex-frame: rgba(0, 160, 255, 0.35);
+  --dex-muted: rgba(175, 205, 230, 0.78);
+  --dex-danger: #ff4466;
+  --dex-success: #00ffaa;
+}

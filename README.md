@@ -1,58 +1,40 @@
-# DEX
+# DEX — Institute of Sound Artist Intelligence Device
 
-DEX is a mobile-shaped futuristic knowledge interface for Institute of Sound.
+Futuristic floating artist intelligence scanner for Institute of Sound.
 
-## Run locally
+## Packages
 
-No dependency installation is required. Node.js is the only runtime.
+- **Library export:** `@instituteofsound/dex` — embed in `instituteofsound-web` via `<DexShell />`
+- **Standalone dev:** `npm run dev` on port **5174**
 
-```bash
-cd ~/Documents/DEX
-npm start
+## Scripts
+
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Standalone dev app with context controls |
+| `npm run build:lib` | Build ESM library to `dist/` |
+| `npm run build` | Typecheck + library build |
+| `npm run typecheck` | TypeScript check |
+
+## Web integration
+
+```tsx
+import { DexShell } from '@instituteofsound/dex'
+import '@instituteofsound/dex/styles/dex.css'
+
+<DexShell
+  apiBaseUrl={env.apiBaseUrl}
+  getAccessToken={() => tokenStorage.getAccessToken()}
+  context={{ trackId, artistProfileId, userId, releaseId }}
+/>
 ```
 
-Open <http://127.0.0.1:4173>.
+## API
 
-For a browser window that opens automatically:
+DEX consumes `GET /api/v1/dex/context` (aggregated) with fallback to existing explore/music endpoints.
 
-```bash
-npm run dev
-```
+## Future
 
-## Open the Mac app
-
-DEX is installed at:
-
-```text
-~/Applications/DEX.app
-```
-
-DEX launches as a draggable floating cube. Click the cube to morph it into the full interface. Press `Esc` to collapse it back into the floating icon.
-
-The native app reads the editable source from `~/Documents/DEX/public`, so changes appear after pressing `Cmd+R` in expanded DEX.
-
-## Edit with Cursor
-
-```bash
-cursor ~/Documents/DEX
-```
-
-If the `cursor` shell command is not installed, open Cursor and choose **File → Open Folder**, then select `Documents/DEX`.
-
-Core files:
-
-- `public/index.html` — interface structure and copy
-- `public/styles.css` — visual system, responsive layout, effects and animations
-- `public/app.js` — launch flow, navigation, popups, map and interactions
-- `public/manifest.webmanifest` — installable web app metadata
-- `macos/DEXApp.swift` — native Mac window wrapper
-
-## Reinstall the native launcher
-
-Usually unnecessary because the Mac app reads the live source. Reinstall only after editing native Swift code or the app icon:
-
-```bash
-npm run install:mac
-```
-
-See [`docs/INTEGRATION.md`](docs/INTEGRATION.md) for integration paths.
+- Tauri desktop wrapper (`src-tauri/`)
+- Audio packs in `public/sounds/`
+- Lyrics & collaborators when API fields ship
